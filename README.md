@@ -1,41 +1,92 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+<img src="" style="margin: 0;">
 
-Welcome woodfordtim,
+# The British Wine Cellar
+This website is...
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+This web application can ve found at:
+[The British Wine Cellar]( )
 
-## Gitpod Reminders
+## UX
+### User Stories
+See attached link to Google Sheets doc
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* As a shopper... so I can...
 
-`python3 -m http.server`
 
-A blue button should appear to click: *Make Public*,
+### Wireframes - links from Adobe XD
+The wireframes for this web app were created using AdobeXD.
 
-Another blue button should appear to click: *Open Browser*.
+[Wireframe]( )
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+PDF files also available in the project folders.
 
-A blue button should appear to click: *Make Public*,
+## Features
+### Feature 1 - 
 
-Another blue button should appear to click: *Open Browser*.
+### Feature 2 - 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+### Feature 3 - 
 
-## Updates Since The Instructional Video
+### Feature 4 -
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+### Feature 5 - 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Technologies Used
+* CSS
+* html
+* Python
+* Flask
+* Jinja
+* Bootstrap 
+* JavaScript
+* JQuery 
+* Allauth
+* Stripe payment system
+* Amazon Web Service for hosting of static and media files
+* Heroku - for Deployment
+* GitPod - the IDE use to develop this web app
+* Postgres
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Testing
+### Test 1: 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Test 2: 
 
---------
+### Test 3: 
 
-Happy coding!
+### Test 4: 
+
+### Test 4: 
+
+
+### Device Testing
+The application loads well on all three devices testes, which include iPhone 11, iPad Pro (9 inch version), Windows laptop.
+
+Basic automated testing has been set up in the test_events.py as a starting point. This follows the Python unittest framework, which can be found here:
+
+[Python Unittest](https://docs.python.org/3/library/unittest.html)
+
+## Bugs and Problems
+### 
+
+### Deployment
+#### Heroku
+The site was deployed using Heroku. 
+
+1. Create an Heroku app with a unique app name.
+2. Link Heroku to your local GutHub respository
+3. Create the following files, using the CLI as stated below:
+    - pip3 freeze --local > requirements.txt
+    - echo web: python app.py > Procfile
+
+#### Local Deployment
+You can also deploy the project locally by following the `clone / download` link from the main repository page and copy the link.  Then, open up a new terminal in your IDE and type 'git clone' followed directly by the copied link.
+
+## New Features to follow in the next version
+*
+
+
+## Credits
+* 
