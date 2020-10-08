@@ -60,7 +60,6 @@ PDF files also available in the project folders.
 
 ### Test 4: 
 
-
 ### Device Testing
 The application loads well on all three devices testes, which include iPhone 11, iPad Pro (9 inch version), Windows laptop.
 
