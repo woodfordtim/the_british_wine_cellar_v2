@@ -1,6 +1,7 @@
+<!DOCTYPE html>
+
 {% load static %}
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,22 +19,16 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 	<link rel="icon" href="../../../../favicon.ico" />
-	<link rel="stylesheet" href="carousel.css" />
 	{% endblock %}
 
 	{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
 	{% endblock %}
 
 	{% block corejs %}
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	{% endblock %}
 
 	{% block extra_ja %}
@@ -44,30 +39,20 @@
 
     <body>
 
-        <header class="container-fluid fixed-top">
-
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">Carousel</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-                <form class="form-inline mt-2 mt-md-0" method="GET" action="">
+        <header class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                        <h2>THE BRITISH WINE CELLAR</h2>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <form class="form-inline mt-2 mt-md-0 rounded-0" method="GET" action="">
                     <div class="input-group w-100">
-                        <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search our site">
+                        <input class="form-control mr-sm-2 rounded-0" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                            <button class="btn btn-outline-success my-2 my-sm-0 rounded-0">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -76,7 +61,39 @@
                     </div>
                 </form>
             </div>
-        </nav>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item dropdown"></li>
+                    <li class="list-inline-item dropdown"></li>
+                </ul>
+            </div>
+
+        </div>
+
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="{% url 'home' %}">THE BRITISH WINE CELLAR</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                   
+                   
+                   
+                    
+                </div>
+            </nav>
 
         </header>
 
@@ -91,6 +108,14 @@
         {% endblock %}
 
         {% block postloadjs %}
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+            $('.carousel').carousel();
+                }
+            });
+        });       
+        </script>
         {% endblock %}
 
     </body>
