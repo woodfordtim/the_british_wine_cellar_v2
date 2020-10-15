@@ -1,5 +1,11 @@
 body {
     color: black;
-    font-family: lato;
+    font-family: 'Nunito', sans-serif;
+    height: calc(100vh - 164px);
+}
+
+    .header-container {
+        padding-top: 164px;
+    }
 }
 
