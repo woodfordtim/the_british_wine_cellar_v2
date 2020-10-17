@@ -1,0 +1,42 @@
+[
+  {
+    "pk": 1,
+    "model": "products.region",
+    "fields": {
+      "name": "east_england",
+      "friendly_name": "East England"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.region",
+    "fields": {
+      "name": "midlands",
+      "friendly_name": "Midlands"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.region",
+    "fields": {
+      "name": "south_england",
+      "friendly_name": "South England"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.region",
+    "fields": {
+      "name": "west_england",
+      "friendly_name": "West England"
+    }
+  },
+    {
+    "pk": 5,
+    "model": "products.region",
+    "fields": {
+      "name": "wales",
+      "friendly_name": "Wales"
+    }
+  }
+]
