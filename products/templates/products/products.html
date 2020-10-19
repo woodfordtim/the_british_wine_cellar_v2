@@ -47,18 +47,18 @@
             <div class="container">
                 
                 <div class="row">
-                {% for product in products %}
                     <div class="col-md-4">
+                    {% for product in products %}
                         <div class="card mb-4 box-shadow">
                             <div class="col-md-4">
-                            {{% if product.image %}}
-                            <a href="{% product.image_url }} product.id %}"></a>
-                                <img class="card-img-top" data-src="{{ product.image_url }}" alt="{{ product.name }}">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}"></a>
+                                <img class="card-img-top" data-src="{{ product.image.url }}" alt="{{ product.name }}">
                             {% else %}
-                             <a href="{% product.image_url }} product.id %}"></a>
+                             <a href="{% url 'product_detail' product.id %}"></a>
                                 <img class="card-img-top" data-src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            {% endif %}
                             </div>
-                            (% endif %)
                             <div class="col card-body">
                                 <p class="card-text">{{ product.friendly_name }}</p>
                                 <p class="card-text">{{ product.description }}</p>
@@ -67,7 +67,7 @@
                                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
                                 {% else %}
                                     <small class="text-muted">No Rating</small>
-                                {% elseif %}
+                                {% endif %}
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -76,6 +76,7 @@
                                 </div>
                             </div>
                         </div>
+                    {% endfor %}
                     </div>
                 </div>
 

@@ -5,6 +5,7 @@ class RegionManager(models.Manager):
     def get_by_natural_key(self, friendly_name):
         return self.get(friendly_name=friendly_name)
 
+        
 class Region(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
