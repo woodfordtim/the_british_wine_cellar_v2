@@ -10,7 +10,7 @@ def all_wines(request):
     context = {
         'products': products,
     }
-
+    print(f"products Queryset: {products}")
     return render(request, 'products/products.html', context)
 
 
