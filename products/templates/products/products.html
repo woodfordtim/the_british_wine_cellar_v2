@@ -43,8 +43,9 @@
                         <div class="card mb-4 box-shadow">
                             <div class="col-md-4">
                             {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}"></a>
+                            <a href="{% url 'product_detail' product.id %}">
                                 <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
                             {% else %}
                              <a href="{% url 'product_detail' product.id %}"></a>
                                 <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
