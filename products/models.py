@@ -35,6 +35,7 @@ class Winery(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+
 class Grape(models.Model):
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254)
@@ -46,13 +47,18 @@ class Grape(models.Model):
         return self.friendly_name
 
 
+class Wine_type(models.Model):
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
 class Wine(models.Model):
-    TYPE = (
-        ('Red', 'Red'),
-        ('White', 'White'),
-        ('Sparkling', 'Sparkling'),
-        ('Rosé', 'Rosé')
-    )
     COUNTRY = (
         ('England', 'England'),
         ('Wales', 'Wales'),
@@ -62,7 +68,7 @@ class Wine(models.Model):
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    wine_type = models.CharField(max_length=254, null=True, blank=True, choices=TYPE)
+    wine_type = models.ForeignKey('Wine_type', null=True, on_delete=models.SET_NULL)
     country = models.CharField(max_length=254, null=True, blank=True, choices=COUNTRY)
     region = models.ForeignKey('Region', null=True, on_delete=models.SET_NULL)
     winery = models.ForeignKey('Winery', null=True, on_delete=models.SET_NULL)

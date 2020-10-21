@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Wine, Region, Winery, Grape
+from .models import Wine, Region, Winery, Grape, Wine_type
 
 
 class WineAdmin(admin.ModelAdmin):
@@ -31,8 +31,14 @@ class GrapeAdmin(admin.ModelAdmin):
         'friendly_name',
     )
 
+class Wine_typeAdmin(admin.ModelAdmin):
+        list_display = (
+        'name',
+        'friendly_name',
+    )
+
 admin.site.register(Wine, WineAdmin)
 admin.site.register(Region, RegionAdmin)
 admin.site.register(Winery, WineryAdmin)
 admin.site.register(Grape, GrapeAdmin)
-
+admin.site.register(Wine_type, Wine_typeAdmin)

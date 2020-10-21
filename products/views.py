@@ -9,8 +9,13 @@ def all_wines(request):
 
     products = Wine.objects.all()
     query = None
+    wine_type = None
 
     if request.GET:
+        if 'wine_type' in request.GET:
+            wine_types = request.GET['wine_type']
+            products = products.filter(wine_type__name__in=wine_types)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:

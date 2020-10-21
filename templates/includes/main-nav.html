@@ -10,12 +10,12 @@
                 SHOP BY WINE TYPE
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Red</a>
-                <a href="" class="dropdown-item ">White</a>
-                <a href="" class="dropdown-item ">Sparkling</a>
-                <a href="" class="dropdown-item ">Rose</a>
-                <a href="" class="dropdown-item ">Organic</a>
-                <a href="" class="dropdown-item ">Vegan-friendly</a>
+                <a href="{% url 'products' %}?wine_type=red" class="dropdown-item">Red</a>
+                <a href="{% url 'products' %}?wine_type=white" class="dropdown-item ">White</a>
+                <a href="{% url 'products' %}?wine_type=sparkling" class="dropdown-item ">Sparkling</a>
+                <a href="{% url 'products' %}?wine_type=rose" class="dropdown-item ">Rosé</a>
+                <a href="{% url 'products' %}?wine_type=organic" class="dropdown-item ">Organic</a>
+                <a href="{% url 'products' %}?wine_type=vegan-friendly" class="dropdown-item ">Vegan-friendly</a>
             </div>
         </li>
 
