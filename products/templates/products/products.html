@@ -36,7 +36,7 @@
 
         <div class="album py-5 bg-light">
             <div class="container">
-                
+                {{products}}
                 <div class="row">
                 {% for product in products %}
                     <div class="col-md-4">
@@ -53,6 +53,7 @@
                             </div>
                             <div class="col card-body">
                                 <p class="card-text">{{ product.friendly_name }}</p>
+                                Name:{{ product.wine_type.name }}
                                 <p class="card-text">{{ product.description }}</p>
                                 <p class="card-text">{{ product.price }}</p>
                                 {% if product.rating %}
