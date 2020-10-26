@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page-header %}
-    <div class="container header-container">
+    <!-- <div class="container header-container">
         <div class="row">
             <div class="col"></div>
         </div>
-    </div>
+    </div> -->
 {% endblock %}
 
 {% block content%}
@@ -19,12 +19,12 @@
             </ol>
         <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="first-slide" src="media/vineyard-large.jpg" alt="First slide"/>
+            <img class="first-slide" src="media/carousel-grapes.jpg" alt="First slide"/>
             <div class="container">
                 <div class="carousel-caption text-left">
-                    <h1>Example headline.</h1>
+                    <h1>Discover the best of British Wine</h1>
                     <p>
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam iddolor id nibh ultricies vehicula ut id elit.
+                        Fast delivery, free gift messaging and tasting notes included.
                     </p>
                     <p>
                         <a class="btn btn-lg btn-primary" href="{% url 'products' %}" role="button">Shop Now</a>
@@ -33,11 +33,12 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="second-slide" src="media/party.jpg" alt="Second slide"/>
+            <img class="second-slide" src="media/carousel-cellar.jpg" alt="Second slide"/>
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p> Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at  eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    <h1>Free Delivery</h1>
+                    <p> 
+                        Free delivery on all orders over £100.
                     </p>
                     <p>
                         <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
@@ -46,11 +47,12 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="third-slide" src="media/vineyard-large.jpg" alt="Third slide"/>
+            <img class="third-slide" src="media/carousel-vineyard.jpg" alt="Third slide"/>
             <div class="container">
                 <div class="carousel-caption text-right">
-                    <h1>One more for good measure.</h1>
-                    <p> Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id nibh ultricies vehicula ut id elit.
+                    <h1>Carefully selected</h1>
+                    <p> 
+                        We carefully select from small and medium vineyards to bring you the highest quality.
                     </p>
                     <p>
                         <a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a>
@@ -68,58 +70,8 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        
-
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-            <div class="col-lg-4">
-                <img class="rounded-circle" src="media/vineyard-large.jpg" alt="Generic placeholder image" width="140" height="140"/>
-                <h2>Heading</h2>
-                <p> Donec sed odio dui. Etiam porta sem malesuada magna mollis
-                    euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                    Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                    Praesent commodo cursus magna.
-                </p>
-                <p>
-                    <a class="btn btn-secondary" href="#" role="button" >View details &raquo;</a>
-                </p>
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>
-                <h2>Heading</h2>
-                <p> Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-                    eget lacinia odio sem nec elit. Cras mattis consectetur purus sit
-                    amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor
-                    mauris condimentum nibh.
-                </p>
-                <p>
-                    <a class="btn btn-secondary" href="#" role="button">View details &raquo;</a>
-                </p>
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-lg-4">
-                <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"/>
-                <h2>Heading</h2>
-                <p> Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
-                    egestas eget quam. Vestibulum id ligula porta felis euismod
-                    semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                    condimentum nibh, ut fermentum massa justo sit amet risus.
-                </p>
-                <p>
-                    <a class="btn btn-secondary" href="#" role="button" >View details &raquo;</a>
-                </p>
-            </div>
-            <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-
-        <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider" />
 
@@ -135,7 +87,7 @@
                 </p>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image"/>
+                <img class="featurette-image img-fluid mx-auto" src="{{ MEDIA_URL }}marketing-1.jpg" alt="Generic placeholder image"/>
             </div>
         </div>
 
@@ -153,7 +105,7 @@
                 </p>
           </div>
           <div class="col-md-5 order-md-1">
-                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image"/>
+                <img class="featurette-image img-fluid mx-auto" src="{{ MEDIA_URL }}marketing-2.jpg" alt="Generic placeholder image"/>
           </div>
         </div>
 
@@ -171,14 +123,14 @@
                 </p>
             </div>
             <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image"/>
+                <img class="featurette-image img-fluid mx-auto" src="{{ MEDIA_URL }}marketing-3.jpg" alt="Generic placeholder image"/>
             </div>
         </div>
 
         <hr class="featurette-divider" />
 
         <!-- /END THE FEATURETTES -->
-      </div>
+    </div>
       <!-- /.container -->
 
       <!-- FOOTER -->
