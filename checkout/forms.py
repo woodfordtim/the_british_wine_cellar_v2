@@ -2,13 +2,14 @@ from django import forms
 from .models import Order
 
 
-class OrderForm(forms.modelForm):
+class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('first_name', 'last_name', 'email',
                   'phone_number', 'street_address1',
                   'street_address2', 'town_or_city',
                   'postcode', 'county', 'country',)
+
 
 def __init__(self, *args, **kwargs):
         """
