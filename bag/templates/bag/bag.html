@@ -44,8 +44,10 @@
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
+
                                     <td class="py-3 w-25">
-                                        <form method="POST" action="">
+                                    <!--Form for increment and decrement buttons -->
+                                        <form class="form update-form" method="POST" action="{% url 'update_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -74,9 +76,18 @@
                                                 </div>
                                             </div>
                                         </form>
+                                        <!-- end of increment and decrement button form -->
                                     </td>
+                                    
+                                    <!-- Update quantity after increment or decrement -->
+                                    <a class="update-link">Update</a>
+                                    <span><i class="fas fa-redo-alt"></i></span>
+
+                                    <a class="update-link">Delete</a>
+                                    <span><i class="fas fa-trash-alt"></i></span>
+                                    
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
+                                        <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -125,6 +136,17 @@
 {% endblock %}
 
 {% block postloadjs %}
+
+<script type="text/javascript">
+    // Update quantity of click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('update-form')
+        form.submit();
+    })
+    // Remove item 
+
+</script>
+
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
