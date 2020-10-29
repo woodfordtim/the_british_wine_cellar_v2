@@ -52,7 +52,7 @@ form.addEventListener('submit', function(ev) {
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
-        'safe-info': saveInfo,
+        'save_info': saveInfo,
     };
     var url = '/checkout/cache_checkout_data/';
 
@@ -104,7 +104,7 @@ form.addEventListener('submit', function(ev) {
                 $('#submit-button').attr('disabled', false);
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
-                   // form.submit();
+                    form.submit();
                 }
             }
         });
