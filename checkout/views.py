@@ -51,9 +51,9 @@ def checkout(request):
         order_form = OrderForm(form_data)
 
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
             payment_intent_id = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_paymenty_intent_id = payment_intent_id
+            order.stripe_payment_intent_id = payment_intent_id
             order.original_bag = json.dumps(bag)
             order.save()
             for item_id, item_data in bag.items():
