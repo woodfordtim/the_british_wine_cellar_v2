@@ -96,7 +96,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY
         )
 
-        # Prefill form using defualt default delivery info
+        # Prefill form using default delivery info
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)

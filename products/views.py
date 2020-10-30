@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Wine, Wine_type, Region, Winery
+from .models import Wine, WineType, Region, Winery
 
 
 def all_wines(request):
@@ -33,7 +33,7 @@ def all_wines(request):
         if 'wine_type' in request.GET:
             wine_types = request.GET['wine_type']
             products = products.filter(wine_type__name=wine_types)
-            wine_types = Wine_type.objects.filter(name__in=wine_types)
+            wine_types = WineType.objects.filter(name__in=wine_types)
 
         if 'region' in request.GET:
             regions = request.GET['region']
