@@ -2,6 +2,7 @@ from django.http import HttpResponse
 
 from .models import Order, OrderLineItem
 from products.models import Wine
+from profiles.models import UserProfile
 
 import json
 import time
@@ -39,6 +40,22 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
+
+        # Update profile information if save_info was checked
+        profile = None
+        username = intent.metadata.username
+        if username!= 'AnnoymousUser':
+            profile.default_profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_phone_number = shipping_details.phone
+                profile.default_street_address1 = shipping_details.address.street_address1
+                profile.default_street_address2 = shipping_details.address.street_address2
+                profile.default_town_or_city = shipping_details.address.town
+                profile.default_county = shipping_details.address.county
+                profile.default_postal_code = shipping_details.address.postal_code
+                profile.default_country = shipping_details.address.country
+                profile.save()
+
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -74,6 +91,7 @@ class StripeWH_Handler:
                 order = Order.objects.create(
                     first_name=shipping_details.first_name,
                     last_name=shipping_details.last_name,
+                    user_profile=profile,
                     email=billing_details.email,
                     phone_number_name=shipping_details.phone,
                     street_addresst=shipping_details.address.street_address1,
