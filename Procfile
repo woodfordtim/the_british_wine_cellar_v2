@@ -1,1 +1,1 @@
-web: gunicorn the-british-wine-cellar.wsgi:application
+web: gunicorn british_wine_cellar.wsgi:application

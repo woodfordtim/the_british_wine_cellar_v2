@@ -130,7 +130,7 @@ if 'DATABASE_URL' in os.environ:
     }
 else:
     DATABASES = {
-    'default': {
+        'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
