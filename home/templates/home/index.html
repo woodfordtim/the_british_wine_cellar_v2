@@ -1,14 +1,6 @@
 {%  extends "base.html" %}
 {% load static %}
 
-{% block page-header %}
-    <!-- <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div> -->
-{% endblock %}
-
 {% block content%}
     <main>
         <div id="myCarousel" class="carousel slide h-100" data-ride="carousel">
@@ -52,7 +44,7 @@
                 <div class="carousel-caption text-right">
                     <h1>Carefully selected</h1>
                     <p> 
-                        We carefully select from small and medium vineyards to bring you the highest quality.
+                        Free delivery on orders over £{{ free_delivery_threshold }}
                     </p>
                     <p>
                         <a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a>
@@ -129,14 +121,12 @@
 
         <hr class="featurette-divider" />
 
-        <!-- /END THE FEATURETTES -->
     </div>
-      <!-- /.container -->
 
       <!-- FOOTER -->
         <footer class="container">
             <p class="float-right"><a href="#">Back to top</a></p>
-            <p> &copy; 2017-2018 Company, Inc. &middot;
+            <p> &copy; The British Wine Cellar, Established 2019. &middot;
                 <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
             </p>
         </footer>

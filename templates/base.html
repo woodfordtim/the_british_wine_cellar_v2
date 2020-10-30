@@ -25,20 +25,16 @@
 
 	{% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/album.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
 	{% endblock %}
 
 	<title>The British Wine Cellar</title>
 </head>
 
     <body>
-
         <header class="container-fluid">
-            <div id="topnav" class="row navbar navbar-expand-md navbar-dark bg-dark pt-lg-2 d-none d-lg-flex">
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <a class="navbar-brand" href="{% url 'home' %}">
-                        <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">THE BRITISH WINE CELLAR
+            <div class="row navbar navbar-expand-md navbar-dark bg-dark text-white">
+                <div class="col-12 col-lg-4 text-center text-lg-left">
+                    <a class="navbar-brand" href="{% url 'home' %}">THE BRITISH WINE CELLAR
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -49,7 +45,7 @@
                         <div class="input-group w-100">
                             <input class="form-control mr-sm-2 rounded-0" type="text" name="q" placeholder="Search our site">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-success my-2 my-sm-0 rounded-0">
+                                <button class="btn btn-outline-light my-2 my-sm-0 rounded-0">
                                     <span class="icon">
                                         <i class="fas fa-search"></i>
                                     </span>
@@ -61,10 +57,10 @@
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="text-light nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
-                                    <p class="my-0">My Account</p>
+                                    <p class="my-0 text-light">My Account</p>
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -82,11 +78,11 @@
                         </li>
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                                <div class="text-center">
+                                <div class="text-center text-light">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                    <p class="my-0">
+                                    <p class="my-0 text-light">
                                         {% if grand_total %}
-                                            ${{ grand_total|floatformat:2 }}
+                                            £{{ grand_total|floatformat:2 }}
                                         {% else %}
                                             $0.00
                                         {% endif %}
@@ -106,11 +102,6 @@
                     {% include 'includes/mobile-top-header.html' %}
                     {% include 'includes/main-nav.html' %}
                 </nav>
-            </div>
-            <div class="row text-center">
-                <div class="col bg-dark">
-                    <h4 class="my-1 text-white">Free delivery on orders over £{{ free_delivery_threshold }}</h4>                
-                </div>
             </div>
         </header>
 

@@ -6,14 +6,6 @@
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
 
 <div class="container">
@@ -67,7 +59,7 @@
             <div class="col-5">
                 <p>£{{ total | floatformat:2 }}</p>
                 <p>£ {{ delivery | floatformat:2 }}</p>
-                <p><strong>{{ grand_total | floatformat:2 }}></strong></p>
+                <p><strong>£{{ grand_total | floatformat:2 }}></strong></p>
             </div>
         </div>
 
