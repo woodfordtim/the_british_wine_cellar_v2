@@ -4,7 +4,7 @@
 {% block content %}
 
     <div class="container">
-        <h1 class="text-center p-5">Browse our Wines</h1>
+        <h1 class="text-center pt-3">Browse our Wines</h1>
         <div class="row">
             <div class="col text-center mt-3">
                 {% for c in current_categories %}
@@ -21,7 +21,8 @@
             <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                 <div class="sort-select-wrapper w-50">
                     <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                        </option>
                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                         <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
                         <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
@@ -42,38 +43,44 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="row">
             {% for product in products %}
-            <div class="card m-1" style="max-width: 540px;">
-                <div class="row product-card">
-                    <div class="col-md-4">
-                        {% if product.image %}
-                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top align-center" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'product_detail' product.id %}"></a>
-                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        {% endif %}
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ product.friendly_name }}</h5>
-                            <p class="card-text">{{ product.description }}</p>
-                            <p class="card-text">£{{ product.price }}</p>
-                            {% if product.rating %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
+            <!-- Product Card -->
+            <div class="col-6 col-md-4 col-xl-3 p-1 m-0">
+                <div class="card m-0 p-0 h-100">
+                    <div class="row">
+                        <div class="col-md-4">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top align-center" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
                             {% else %}
-                                <small class="text-muted">No Rating</small>
+                            <a href="{% url 'product_detail' product.id %}"></a>
+                                <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                             {% endif %}
-                            {% if request.user.is_superuser %}
-                                <small class="ml-3">
-                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
-                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                </small>
-                            {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.friendly_name }}</h5>
+                                <p class="card-text">{{ product.description }}</p>
+                                <p class="card-text">£{{ product.price }}</p>
+                                {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}</small>
+                                {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                {% endif %}
+                                <p class="pt-2 mb-1">
+                                    <a class="btn btn-outline-dark btn-sm rounded-0" href="{% url 'product_detail' product.id %}" >Find out more...</a>
+                                </p>
+                                
+                                {% if request.user.is_superuser %}
+                                    <small>
+                                        <a class="text-dark mr-1" href="{% url 'edit_product' product.id %}">Edit</a>
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>

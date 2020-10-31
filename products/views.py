@@ -14,6 +14,7 @@ def all_wines(request):
     wine_types = None
     regions = None
     wineries = None
+    grapes = None
     sort = None
     direction = None
 
@@ -46,6 +47,11 @@ def all_wines(request):
             wineries = request.GET['winery']
             products = products.filter(winery__name=wineries)
             wineries = Winery.objects.filter(name__in=wineries)
+
+        if 'grape' in request.GET:
+            grapes = request.GET['grape']
+            products = products.filter(grape__name=grapes)
+            grapes = Wine.objects.filter(grape__in=grapes)
 
         if 'q' in request.GET:
             query = request.GET['q']
