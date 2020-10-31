@@ -3,7 +3,7 @@
 
 {% block content%}
     <main>
-        <div id="myCarousel" class="carousel slide h-100" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide h-75" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -14,12 +14,12 @@
             <img class="first-slide" src="media/carousel-grapes.jpg" alt="First slide"/>
             <div class="container">
                 <div class="carousel-caption text-left">
-                    <h1>Discover the best of British Wine</h1>
+                    <h1>Carefully selected from all over the Great Britain</h1>
                     <p>
-                        Fast delivery, free gift messaging and tasting notes included.
+                        Our wines are carefully selected from the best winemakers all from Britain
                     </p>
                     <p>
-                        <a class="btn btn-lg btn-primary" href="{% url 'products' %}" role="button">Shop Now</a>
+                        <a class="btn btn-lg btn-light" href="{% url 'products' %}" role="button">Shop Now</a>
                     </p>
                 </div>
             </div>
@@ -28,12 +28,12 @@
             <img class="second-slide" src="media/carousel-cellar.jpg" alt="Second slide"/>
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Free Delivery</h1>
+                    <h1>We have wide selection of wines to choose from</h1>
                     <p> 
-                        Free delivery on all orders over £100.
+                        Discover a wide selection of delcious wines from around Britain
                     </p>
                     <p>
-                        <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
+                        <a class="btn btn-lg btn-light" href="{% url 'products' %}" role="button">Shop Now</a>
                     </p>
                 </div>
             </div>
@@ -42,12 +42,12 @@
             <img class="third-slide" src="media/carousel-vineyard.jpg" alt="Third slide"/>
             <div class="container">
                 <div class="carousel-caption text-right">
-                    <h1>Carefully selected</h1>
+                    <h1>Discover the best of British Wine</h1>
                     <p> 
                         Free delivery on orders over £{{ free_delivery_threshold }}
                     </p>
                     <p>
-                        <a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a>
+                        <a class="btn btn-lg btn-light" href="{% url 'products' %}" role="button">Shop Now</a>
                     </p>
                 </div>
             </div>
@@ -63,73 +63,27 @@
             </a>
         </div>
 
-    <div class="container marketing">
+        <div class="container marketing">
 
-        <hr class="featurette-divider" />
+            <div class="row featurette pb-5 mt-0 pt-0">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">The British Wine Cellar</h2>
+                    <p class="lead">Whatever your preference, we have a wine from Great Britain that you will love. If you like your white wines to be fresh and fruity or full-bodied and aromatic, if you like your red wines to be light and complex or full and intense, if you like your rosé wines to be delicate and dry or fruit led - vineyards in England & Wales produce wines of many different styles, and there is something for everyone!  
+                    </p>
+                </div>
+                <div class="col-md-5 pt-5 mt-3">
+                    <img class="featurette-image img-fluid mx-auto" src="{{ MEDIA_URL }}marketing-1.jpg" alt="wine immage-1"/>
+                </div>
+            </div>
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">First featurette heading.
-                    <span class="text-muted">It'll blow your mind.</span>
-                </h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-                ligula porta felis euismod semper. Praesent commodo cursus magna,
-                vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                commodo.
+            <hr>
+        <!-- FOOTER -->
+            <footer class="container">
+                <p class="float-right text-dark"><a class="text-dark" href="#">Back to top</a></p>
+                <p> &copy; The British Wine Cellar, Established 2019. &middot;
                 </p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="{{ MEDIA_URL }}marketing-1.jpg" alt="Generic placeholder image"/>
-            </div>
+            </footer>
         </div>
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Oh yeah, it's that good.
-                    <span class="text-muted">See for yourself.</span>
-                </h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-                ligula porta felis euismod semper. Praesent commodo cursus magna,
-                vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                commodo.
-                </p>
-          </div>
-          <div class="col-md-5 order-md-1">
-                <img class="featurette-image img-fluid mx-auto" src="{{ MEDIA_URL }}marketing-2.jpg" alt="Generic placeholder image"/>
-          </div>
-        </div>
-
-        <hr class="featurette-divider" />
-
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading"> And lastly, this one. 
-                    <span class="text-muted">Checkmate.</span>
-                </h2>
-                <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-                ligula porta felis euismod semper. Praesent commodo cursus magna,
-                vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                commodo.
-                </p>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" src="{{ MEDIA_URL }}marketing-3.jpg" alt="Generic placeholder image"/>
-            </div>
-        </div>
-
-        <hr class="featurette-divider" />
-
-    </div>
-
-      <!-- FOOTER -->
-        <footer class="container">
-            <p class="float-right"><a href="#">Back to top</a></p>
-            <p> &copy; The British Wine Cellar, Established 2019. &middot;
-                <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-            </p>
-        </footer>
     </main>
 {% endblock %}
 

@@ -13,11 +13,6 @@ body {
 /*----------------------------------  Mega-Menu styling */
 
 
-.dropdown-menu {
-    width: 400px !important;
-    height: 400px !important;
-}
-
 .mega-menu:hover .dropdown-content {
   display: block;
 }

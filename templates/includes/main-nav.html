@@ -21,19 +21,13 @@
             <div class="dropdown-menu dropdown-content shadow p-3 mb-5 bg-white rounded-0 border-0"
                 aria-labelledby="wine_type-link">
                 <div class="row px-3">
-                    <h3>Wine Type</h3>
+                    <h5><strong>Wine Type</strong></h5>
                 </div>
                 <div class="row">
-                    <div class="col-4 p-2">
-                        <a href="{% url 'products' %}?wine_type=red" class="dropdown-item">Red</a>
-                        <a href="{% url 'products' %}?wine_type=white" class="dropdown-item ">White</a>
-                        <a href="{% url 'products' %}?wine_type=sparkling" class="dropdown-item ">Sparkling</a>
-                    </div>
-                    <div class="col-4 p-2">
-                        <a href="{% url 'products' %}?wine_type=rose" class="dropdown-item ">Rosé</a>
-                        <a href="{% url 'products' %}?wine_type=organic" class="dropdown-item ">Organic</a>
-                        <a href="{% url 'products' %}?wine_type=vegan-friendly" class="dropdown-item ">Vegan-friendly</a>
-                    </div>
+                    <a href="{% url 'products' %}?wine_type=red" class="dropdown-item">Red</a>
+                    <a href="{% url 'products' %}?wine_type=white" class="dropdown-item ">White</a>
+                    <a href="{% url 'products' %}?wine_type=sparkling" class="dropdown-item ">Sparkling</a>
+                    <a href="{% url 'products' %}?wine_type=rose" class="dropdown-item ">Rosé</a>
                 </div>
             </div>
         </li> 
@@ -45,18 +39,14 @@
             <div class="dropdown-menu dropdown-content shadow p-3 mb-5 bg-white rounded-0 border-0" 
                 aria-labelledby="region-link">
                 <div class="row px-3">
-                    <h3>Region</h3>
+                    <h5><strong>Region</strong></h5>
                 </div>
                 <div class="row">
-                    <div class="col-6">
-                        <a href="{% url 'products' %}?region=east-england" class="dropdown-item">East England</a>
-                        <a href="{% url 'products' %}?region=Midlands" class="dropdown-item">Midlands</a>
-                        <a href="{% url 'products' %}?region=south-england" class="dropdown-item">South England</a>
-                    </div>
-                    <div class="col-6">
-                        <a href="{% url 'products' %}?region=west-england" class="dropdown-item">West England</a>
-                        <a href="{% url 'products' %}?region=wales" class="dropdown-item">Wales</a>
-                    </div>
+                    <a href="{% url 'products' %}?region=east-england" class="dropdown-item">East England</a>
+                    <a href="{% url 'products' %}?region=Midlands" class="dropdown-item">Midlands</a>
+                    <a href="{% url 'products' %}?region=south-england" class="dropdown-item">South England</a>
+                    <a href="{% url 'products' %}?region=west-england" class="dropdown-item">West England</a>
+                    <a href="{% url 'products' %}?region=wales" class="dropdown-item">Wales</a>
                 </div>
             </div>
         </li>
@@ -67,34 +57,30 @@
             </a>
             <div class="dropdown-menu dropdown-content shadow p-3 bg-white rounded-0 border-0" 
                 aria-labelledby="winery-link">
-                <div class="row w-100">
-                    <h3>Vineyards</h3>
+                <div class="row px-3">
+                    <h5><strong>Vineyards</strong></h5>
                 </div>
                 <div class="row mega-menu">
-                    <div class="col-4 p-2">
-                        <a href="{% url 'products' %}?region=albury-organic-vineyard" class="dropdown-item">Albury Organic  
-                            Vineyard</a>
-                        <a href="{% url 'products' %}?winery=beacon-down" class="dropdown-item">Beacon Down</a>
-                        <a href="{% url 'products' %}?winery=bolney-estate" class="dropdown-item">Bolney Estate</a>
-                        <a href="{% url 'products' %}?winery=carr-taylor" class="dropdown-item">Carr Taylor</a>
-                        <a href="{% url 'products' %}?winery=chilford-hall" class="dropdown-item">Chilford Hall</a>
-                        <a href="{% url 'products' %}?winery=fox-and-fox" class="dropdown-item">Fox &amp; Fox</a>
-                        <a href="{% url 'products' %}?winery=grey-friars" class="dropdown-item">Grey Friars Vineyard</a>
-                        <a href="{% url 'products' %}?winery=gwinllan-conwy" class="dropdown-item">Gwinllan Conwy</a>
-                        <a href="{% url 'products' %}?winery=hidden-spring" class=" dropdown-item">Hidden Spring</a>
-                        <a href="{% url 'products' %}?winery=litmus-wine" class="dropdown-item">Litmus Wine</a>
-                    </div>
-                    <div class="col-4 p-2">
-                        <a href="{% url 'products' %}?winery=lowick" class="dropdown-item">Lowick Vineyard</a>
-                        <a href="{% url 'products' %}?winery=montgomery" class="dropdown-item">Montgomery</a>
-                        <a href="{% url 'products' %}?winery=sixteen-ridges" class="dropdown-item">
-                            Sixteen Ridges Vineyard</a>
-                        <a href="{% url 'products' %}?winery=welcome-hills" class="dropdown-item">
-                            Welcombe Hills Vineyard</a>
-                        <a href="{% url 'products' %}?winery=whitehall" class="dropdown-item">Whitehall</a>
-                        <a href="{% url 'products' %}?winery=winibirri" class="dropdown-item">Winibirri</a>
+                    <a href="{% url 'products' %}?region=albury-organic-vineyard" class="dropdown-item">Albury Organic  
+                        Vineyard</a>
+                    <a href="{% url 'products' %}?winery=beacon-down" class="dropdown-item">Beacon Down</a>
+                    <a href="{% url 'products' %}?winery=bolney-estate" class="dropdown-item">Bolney Estate</a>
+                    <a href="{% url 'products' %}?winery=carr-taylor" class="dropdown-item">Carr Taylor</a>
+                    <a href="{% url 'products' %}?winery=chilford-hall" class="dropdown-item">Chilford Hall</a>
+                    <a href="{% url 'products' %}?winery=fox-and-fox" class="dropdown-item">Fox &amp; Fox</a>
+                    <a href="{% url 'products' %}?winery=grey-friars" class="dropdown-item">Grey Friars Vineyard</a>
+                    <a href="{% url 'products' %}?winery=gwinllan-conwy" class="dropdown-item">Gwinllan Conwy</a>
+                    <a href="{% url 'products' %}?winery=hidden-spring" class=" dropdown-item">Hidden Spring</a>
+                    <a href="{% url 'products' %}?winery=litmus-wine" class="dropdown-item">Litmus Wine</a>
+                    <a href="{% url 'products' %}?winery=lowick" class="dropdown-item">Lowick Vineyard</a>
+                    <a href="{% url 'products' %}?winery=montgomery" class="dropdown-item">Montgomery</a>
+                    <a href="{% url 'products' %}?winery=sixteen-ridges" class="dropdown-item">
+                        Sixteen Ridges Vineyard</a>
+                    <a href="{% url 'products' %}?winery=welcome-hills" class="dropdown-item">
+                        Welcombe Hills Vineyard</a>
+                    <a href="{% url 'products' %}?winery=whitehall" class="dropdown-item">Whitehall</a>
+                    <a href="{% url 'products' %}?winery=winibirri" class="dropdown-item">Winibirri</a>
                         <a href="{% url 'products' %}?winery=winston-estate" class="dropdown-item">Wiston Estate</a>
-                    </div>
                 </div>
             </div>
         </li>
