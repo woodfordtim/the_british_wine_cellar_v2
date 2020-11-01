@@ -63,15 +63,20 @@ The wireframes for this web app were created using AdobeXD.
 PDF files also available in the project folders.
 
 ## Features
-### Feature 1 - 
+### Feature 1 - Search, filter and Sort by wine type, vineyard, different grapes and regions
+* Shoppers can use the navigation dropdowns on the main header to filter under different categories, including wine type (i.e red, white, sparkling and rose.
+* Shoppers can also use the search bar to search for a given term.
+* Shoppers can use the filter dropdown tool in the product views to filter by different categories.
 
-### Feature 2 - 
+### Feature 2 - Browse, view and purchase a bottle of wine
+* Shoppers can browse the selection of wines and the follow the links to see the product details. 
+* If they like what they can see they can add the wine to their basket and purchase using the secure payment system, Stripe.
 
-### Feature 3 - 
+### Feature 3 - Create an account and view order history
+* Users can create an account when  purchasing a product then view the history of their orders by logging in securely into their own profile.
 
-### Feature 4 -
-
-### Feature 5 - 
+### Feature 4 - Store Owners can add, edit, update and delete products from their store
+* Store owners have superuser access and can log into the management side of the store. Once authenticated they can add, eit, update and delete products.
 
 
 ## Technologies Used
@@ -104,7 +109,7 @@ PDF files also available in the project folders.
 ### Test 4: 
 
 ### Device Testing
-The application loads well on all three devices testes, which include iPhone 11, iPad Pro (9 inch version), Windows laptop.
+(AWS caused an issue meaning I have been unable to upload media and static files for Heroku to deploy.)
 
 Basic automated testing has been set up in the test_events.py as a starting point. This follows the Python unittest framework, which can be found here:
 
@@ -135,3 +140,11 @@ You can also deploy the project locally by following the `clone / download` link
 * Inventory tracking for products.
 * Improved security in payment and addtion of Google and Apple pay.
 * Complete email setup with GMail SMTP
+* Make further customisations to all templates, including Allauth templates.
+* Add messaging using Bootstrap Toasts
+* Remove the comma in the list of 'grapes' in the product description.
+
+## Credits
+* The use of the Code Institute tutuorial videos (of Boutique Ado) were essential in completing this project, particularly in completing the secure checkout functionality (webhook, webhook handlers and use of Stripe). There are elements of the code from the the Boutique Ado project running this project but they have been adapted to meet the needs of a different store - for the purpose of The British Wine Cellar.
+* Some templates remain overly-similar to the Boutique Ado where there not enough time was allowed for the customisation of all templates. This remains a point for future development of this project beyond submission.
+
