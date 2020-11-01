@@ -1,5 +1,3 @@
-<img src="" style="margin: 0;">
-
 # The British Wine Cellar
 This is website for an online wine retailer called The British Wine Cellar. The British Wine Cellar 
 focus on supporting small and medium sized vineyards and wineries promoting local produce and celebrating 
@@ -98,7 +96,7 @@ PDF files also available in the project folders.
 
 
 ## Testing
-### Test 1: 
+### Test 1: Testing not completed at time of writing.
 
 ### Test 2: 
 
@@ -118,8 +116,10 @@ Basic automated testing has been set up in the test_events.py as a starting poin
 ## Bugs and Problems
 ### 
 * Selecting the 'save information to my account' was causing an error
-* Email verification not fully setup
+* Email verification not fully setup with Google smtp.
 * AWS caused issue with uploading media files due to issue with 'storage class'
+* Minor CSS / Boostrap issue causing tow mobile navs to load.
+* Order history in the My Profile template is not showing correctly.
 
 ### Deployment
 #### Heroku
@@ -143,8 +143,9 @@ You can also deploy the project locally by following the `clone / download` link
 * Make further customisations to all templates, including Allauth templates.
 * Add messaging using Bootstrap Toasts
 * Remove the comma in the list of 'grapes' in the product description.
+* Complete email verification setup.
 
 ## Credits
 * The use of the Code Institute tutuorial videos (of Boutique Ado) were essential in completing this project, particularly in completing the secure checkout functionality (webhook, webhook handlers and use of Stripe). There are elements of the code from the the Boutique Ado project running this project but they have been adapted to meet the needs of a different store - for the purpose of The British Wine Cellar.
-* Some templates remain overly-similar to the Boutique Ado where there not enough time was allowed for the customisation of all templates. This remains a point for future development of this project beyond submission.
+* Some templates remain overly-similar to the Boutique Ado where the videos were followed and was there not enough time was allowed for the customisation of all templates. This remains a point for future development of this project beyond submission.
 
