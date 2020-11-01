@@ -3,7 +3,7 @@ This is website for an online wine retailer called The British Wine Cellar. The 
 focus on supporting small and medium sized vineyards and wineries promoting local produce and celebrating 
 the little know high quality wines that can be found across Great Britain.
 
-This current interation of the website sets out the foundation for a wider project that will introdcue more
+This current iteration of the website sets out the foundation for a wider project that will introdcue more
 products and celebrate more vineyards.
 
 This web application can ve found at:
